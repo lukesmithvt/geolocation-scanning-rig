@@ -13,34 +13,27 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
+
+SRCS := $(shell find src -name '*.c')
+DEPS := $(shell find include -name '*.h')
+OBJS := $(patsubst src/%,build/%,$(SRCS:.c=.o))
+
 CFLAGS := -O3 -std=gnu99 -Wall -g
 LFLAGS := -lwiringPi
 
-.PHONY: clean reset
-one_shot: bin/one_shot
+
 concurrent: bin/concurrent
-menu_mode: bin/menu_mode
-test: bin/file_writing
 
-bin/one_shot: one_shot.c
-> @mkdir -p build bin log raw
-> $(CC) $(CFLAGS) -c $< -o build/one_shot.o
-> $(CC) -o $@ build/one_shot.o $(LFLAGS)
+bin/concurrent: $(OBJS)
+> @mkdir -p bin
+> $(CC) -o $@ $^ $(LFLAGS) 
 
-bin/concurrent: concurrent.c
-> @mkdir -p build bin log raw
-> $(CC) $(CFLAGS) -c $< -o build/concurrent.o
-> $(CC) -o $@ build/concurrent.o $(LFLAGS)
+$(OBJS): build/%.o: src/%.c
+> @mkdir -p build
+> $(CC) $(CFLAGS) -c $< -Iinclude -o $@
 
-bin/menu_mode: menu_mode.c
-> @mkdir -p build bin
-> $(CC) $(CFLAGS) -c $< -o build/menu_mode.o
-> $(CC) -o $@ build/menu_mode.o $(LFLAGS)
 
-bin/file_writing: file_writing.c
-> @mkdir -p build bin
-> $(CC) $(CFLAGS) -c $< -o build/file_writing.o
-> $(CC) -o $@ build/file_writing.o $(LFLAGS)
+.PHONY: clean reset
 
 clean:
 > $(RM) -r bin build
