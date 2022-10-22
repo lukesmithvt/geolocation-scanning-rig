@@ -1,0 +1,2299 @@
+{
+	"timestamp": 1666289948,
+	"propertyName": "happy",
+	"poiName": "room101",
+	"group": 0,
+	"scanData": [
+		{
+			"tech": "wifi-2.4",
+			"ssid": "0xebfe",
+			"mac": "1298c3a8307c",
+			"count": 1,
+			"rssi_raw": -34,
+			"rssi_min": -34,
+			"rssi_max": -34,
+			"rssi_avg": -34
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128a5d70",
+			"count": 1,
+			"rssi_raw": -40,
+			"rssi_min": -40,
+			"rssi_max": -40,
+			"rssi_avg": -40
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128a5d71",
+			"count": 1,
+			"rssi_raw": -41,
+			"rssi_min": -41,
+			"rssi_max": -41,
+			"rssi_avg": -41
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "eduroam",
+			"mac": "9c1c128a5d60",
+			"count": 1,
+			"rssi_raw": -46,
+			"rssi_min": -46,
+			"rssi_max": -46,
+			"rssi_avg": -46
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128a5d61",
+			"count": 1,
+			"rssi_raw": -46,
+			"rssi_min": -46,
+			"rssi_max": -46,
+			"rssi_avg": -46
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "RBCPES-5G",
+			"mac": "9c3dcf1954ad",
+			"count": 1,
+			"rssi_raw": -63,
+			"rssi_min": -63,
+			"rssi_max": -63,
+			"rssi_avg": -63
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "fclee",
+			"mac": "28cfdab3c3f3",
+			"count": 1,
+			"rssi_raw": -65,
+			"rssi_min": -65,
+			"rssi_max": -65,
+			"rssi_avg": -65
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128b8871",
+			"count": 1,
+			"rssi_raw": -66,
+			"rssi_min": -66,
+			"rssi_max": -66,
+			"rssi_avg": -66
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128a6c50",
+			"count": 1,
+			"rssi_raw": -66,
+			"rssi_min": -66,
+			"rssi_max": -66,
+			"rssi_avg": -66
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128a6c51",
+			"count": 1,
+			"rssi_raw": -66,
+			"rssi_min": -66,
+			"rssi_max": -66,
+			"rssi_avg": -66
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128c55f0",
+			"count": 1,
+			"rssi_raw": -67,
+			"rssi_min": -67,
+			"rssi_max": -67,
+			"rssi_avg": -67
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128c55f1",
+			"count": 1,
+			"rssi_raw": -67,
+			"rssi_min": -67,
+			"rssi_max": -67,
+			"rssi_avg": -67
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128c2a70",
+			"count": 1,
+			"rssi_raw": -67,
+			"rssi_min": -67,
+			"rssi_max": -67,
+			"rssi_avg": -67
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128c2a71",
+			"count": 1,
+			"rssi_raw": -67,
+			"rssi_min": -67,
+			"rssi_max": -67,
+			"rssi_avg": -67
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "fclee",
+			"mac": "28cfdab3c3f4",
+			"count": 1,
+			"rssi_raw": -67,
+			"rssi_min": -67,
+			"rssi_max": -67,
+			"rssi_avg": -67
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "b45d50e21f90",
+			"count": 1,
+			"rssi_raw": -69,
+			"rssi_min": -69,
+			"rssi_max": -69,
+			"rssi_avg": -69
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "b45d50e21f91",
+			"count": 1,
+			"rssi_raw": -69,
+			"rssi_min": -69,
+			"rssi_max": -69,
+			"rssi_avg": -69
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "DIRECT-D7-HP OfficeJet Pro 8720",
+			"mac": "48ba4e862edb",
+			"count": 1,
+			"rssi_raw": -70,
+			"rssi_min": -70,
+			"rssi_max": -70,
+			"rssi_avg": -70
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "b45d50e21f81",
+			"count": 1,
+			"rssi_raw": -73,
+			"rssi_min": -73,
+			"rssi_max": -73,
+			"rssi_avg": -73
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "eduroam",
+			"mac": "b45d50e21f80",
+			"count": 1,
+			"rssi_raw": -74,
+			"rssi_min": -74,
+			"rssi_max": -74,
+			"rssi_avg": -74
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128be270",
+			"count": 1,
+			"rssi_raw": -74,
+			"rssi_min": -74,
+			"rssi_max": -74,
+			"rssi_avg": -74
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128be271",
+			"count": 1,
+			"rssi_raw": -75,
+			"rssi_min": -75,
+			"rssi_max": -75,
+			"rssi_avg": -75
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128c55e1",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "eduroam",
+			"mac": "9c1c128c55e0",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128c3330",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128c3331",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128abf30",
+			"count": 1,
+			"rssi_raw": -77,
+			"rssi_min": -77,
+			"rssi_max": -77,
+			"rssi_avg": -77
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128abf31",
+			"count": 1,
+			"rssi_raw": -78,
+			"rssi_min": -78,
+			"rssi_max": -78,
+			"rssi_avg": -78
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "DIRECT-52-HP 1200 Neverstop",
+			"mac": "3224a9616752",
+			"count": 1,
+			"rssi_raw": -79,
+			"rssi_min": -79,
+			"rssi_max": -79,
+			"rssi_avg": -79
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "DIRECT-8C-HP M479fdw Color LJ",
+			"mac": "c2180357aa8c",
+			"count": 1,
+			"rssi_raw": -79,
+			"rssi_min": -79,
+			"rssi_max": -79,
+			"rssi_avg": -79
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128a6c41",
+			"count": 1,
+			"rssi_raw": -80,
+			"rssi_min": -80,
+			"rssi_max": -80,
+			"rssi_avg": -80
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128be261",
+			"count": 1,
+			"rssi_raw": -81,
+			"rssi_min": -81,
+			"rssi_max": -81,
+			"rssi_avg": -81
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128b8861",
+			"count": 1,
+			"rssi_raw": -81,
+			"rssi_min": -81,
+			"rssi_max": -81,
+			"rssi_avg": -81
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128abeb0",
+			"count": 1,
+			"rssi_raw": -81,
+			"rssi_min": -81,
+			"rssi_max": -81,
+			"rssi_avg": -81
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128abeb1",
+			"count": 1,
+			"rssi_raw": -81,
+			"rssi_min": -81,
+			"rssi_max": -81,
+			"rssi_avg": -81
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "eduroam",
+			"mac": "9c1c128be260",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "eduroam",
+			"mac": "9c1c128b8860",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128c5c31",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "eduroam",
+			"mac": "9c1c128c5c30",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "675 Print",
+			"mac": "c0c1c022e279",
+			"count": 1,
+			"rssi_raw": -84,
+			"rssi_min": -84,
+			"rssi_max": -84,
+			"rssi_avg": -84
+		},
+		{
+			"tech": "wifi-5",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128bc571",
+			"count": 1,
+			"rssi_raw": -84,
+			"rssi_min": -84,
+			"rssi_max": -84,
+			"rssi_avg": -84
+		},
+		{
+			"tech": "wifi-2.4",
+			"ssid": "VirginiaTech",
+			"mac": "9c1c128b8ba1",
+			"count": 1,
+			"rssi_raw": -89,
+			"rssi_min": -89,
+			"rssi_max": -89,
+			"rssi_avg": -89
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "324449524543",
+			"count": 1,
+			"rssi_raw": 84,
+			"rssi_min": 84,
+			"rssi_max": 84,
+			"rssi_avg": 84
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "2d37372d4850",
+			"count": 1,
+			"rssi_raw": 32,
+			"rssi_min": 32,
+			"rssi_max": 32,
+			"rssi_avg": 32
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "4d343032204c",
+			"count": 1,
+			"rssi_raw": 97,
+			"rssi_min": 97,
+			"rssi_max": 97,
+			"rssi_avg": 97
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "7365724a6574",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "00000000000e",
+			"count": 1,
+			"rssi_raw": -106,
+			"rssi_min": -106,
+			"rssi_max": -106,
+			"rssi_avg": -106
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "e6784d77ab32",
+			"count": 1,
+			"rssi_raw": 86,
+			"rssi_min": 86,
+			"rssi_max": 86,
+			"rssi_avg": 86
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "697267696e69",
+			"count": 1,
+			"rssi_raw": 97,
+			"rssi_min": 97,
+			"rssi_max": 97,
+			"rssi_avg": 97
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "546563680000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "000000000000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "000000000000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "0000009c1c12",
+			"count": 1,
+			"rssi_raw": -117,
+			"rssi_min": -117,
+			"rssi_max": -117,
+			"rssi_avg": -117
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "8ba1aa326564",
+			"count": 1,
+			"rssi_raw": 117,
+			"rssi_min": 117,
+			"rssi_max": 117,
+			"rssi_avg": 117
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "726f616d0000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "000000000000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "000000000000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "000000000000",
+			"count": 1,
+			"rssi_raw": 0,
+			"rssi_min": 0,
+			"rssi_max": 0,
+			"rssi_avg": 0
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "009c1c128b8b",
+			"count": 1,
+			"rssi_raw": -96,
+			"rssi_min": -96,
+			"rssi_max": -96,
+			"rssi_avg": -96
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a94a9675c0ef",
+			"count": 1,
+			"rssi_raw": -114,
+			"rssi_min": -114,
+			"rssi_max": -114,
+			"rssi_avg": -114
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c44a9675c0ef",
+			"count": 1,
+			"rssi_raw": -114,
+			"rssi_min": -114,
+			"rssi_max": -114,
+			"rssi_avg": -114
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c42449911d0c",
+			"count": 1,
+			"rssi_raw": 26,
+			"rssi_min": 26,
+			"rssi_max": 26,
+			"rssi_avg": 26
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b4481a9f428d",
+			"count": 1,
+			"rssi_raw": -87,
+			"rssi_min": -87,
+			"rssi_max": -87,
+			"rssi_avg": -87
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "be481a9f428d",
+			"count": 1,
+			"rssi_raw": -87,
+			"rssi_min": -87,
+			"rssi_max": -87,
+			"rssi_avg": -87
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "be5c4631d369",
+			"count": 1,
+			"rssi_raw": -110,
+			"rssi_min": -110,
+			"rssi_max": -110,
+			"rssi_avg": -110
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a85c4631d369",
+			"count": 1,
+			"rssi_raw": -110,
+			"rssi_min": -110,
+			"rssi_max": -110,
+			"rssi_avg": -110
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a8543ad66a90",
+			"count": 1,
+			"rssi_raw": -83,
+			"rssi_min": -83,
+			"rssi_max": -83,
+			"rssi_avg": -83
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa040434e181",
+			"count": 1,
+			"rssi_raw": 116,
+			"rssi_min": 116,
+			"rssi_max": 116,
+			"rssi_avg": 116
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa3bca5731d7",
+			"count": 1,
+			"rssi_raw": 117,
+			"rssi_min": 117,
+			"rssi_max": 117,
+			"rssi_avg": 117
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa11327da731",
+			"count": 1,
+			"rssi_raw": -3,
+			"rssi_min": -3,
+			"rssi_max": -3,
+			"rssi_avg": -3
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a650017b9a3c",
+			"count": 1,
+			"rssi_raw": -115,
+			"rssi_min": -115,
+			"rssi_max": -115,
+			"rssi_avg": -115
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a850017b9a3c",
+			"count": 1,
+			"rssi_raw": -115,
+			"rssi_min": -115,
+			"rssi_max": -115,
+			"rssi_avg": -115
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a8cc6ea43f6d",
+			"count": 1,
+			"rssi_raw": -50,
+			"rssi_min": -50,
+			"rssi_max": -50,
+			"rssi_avg": -50
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "bc6ffe65617a",
+			"count": 1,
+			"rssi_raw": 120,
+			"rssi_min": 120,
+			"rssi_max": 120,
+			"rssi_avg": 120
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c63ce315e069",
+			"count": 1,
+			"rssi_raw": 31,
+			"rssi_min": 31,
+			"rssi_max": 31,
+			"rssi_avg": 31
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ca290ac540f7",
+			"count": 1,
+			"rssi_raw": -40,
+			"rssi_min": -40,
+			"rssi_max": -40,
+			"rssi_avg": -40
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ca7fca76f310",
+			"count": 1,
+			"rssi_raw": 117,
+			"rssi_min": 117,
+			"rssi_max": 117,
+			"rssi_avg": 117
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a6d99f3fd972",
+			"count": 1,
+			"rssi_raw": 41,
+			"rssi_min": 41,
+			"rssi_max": 41,
+			"rssi_avg": 41
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c4715ddba5c7",
+			"count": 1,
+			"rssi_raw": 7,
+			"rssi_min": 7,
+			"rssi_max": 7,
+			"rssi_avg": 7
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c8715ddba5c7",
+			"count": 1,
+			"rssi_raw": 7,
+			"rssi_min": 7,
+			"rssi_max": 7,
+			"rssi_avg": 7
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c824e7ccd8a8",
+			"count": 1,
+			"rssi_raw": -44,
+			"rssi_min": -44,
+			"rssi_max": -44,
+			"rssi_avg": -44
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b2503ad016a1",
+			"count": 1,
+			"rssi_raw": -119,
+			"rssi_min": -119,
+			"rssi_max": -119,
+			"rssi_avg": -119
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a629880a1a96",
+			"count": 1,
+			"rssi_raw": -78,
+			"rssi_min": -78,
+			"rssi_max": -78,
+			"rssi_avg": -78
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "9e1b00194239",
+			"count": 1,
+			"rssi_raw": -75,
+			"rssi_min": -75,
+			"rssi_max": -75,
+			"rssi_avg": -75
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a8766e0847cb",
+			"count": 1,
+			"rssi_raw": 60,
+			"rssi_min": 60,
+			"rssi_max": 60,
+			"rssi_avg": 60
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a6c825bfc353",
+			"count": 1,
+			"rssi_raw": 101,
+			"rssi_min": 101,
+			"rssi_max": 101,
+			"rssi_avg": 101
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c84967271aa9",
+			"count": 1,
+			"rssi_raw": -105,
+			"rssi_min": -105,
+			"rssi_max": -105,
+			"rssi_avg": -105
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b64967271aa9",
+			"count": 1,
+			"rssi_raw": -105,
+			"rssi_min": -105,
+			"rssi_max": -105,
+			"rssi_avg": -105
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b66f6e23188e",
+			"count": 1,
+			"rssi_raw": -116,
+			"rssi_min": -116,
+			"rssi_max": -116,
+			"rssi_avg": -116
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa6f6e23188e",
+			"count": 1,
+			"rssi_raw": -116,
+			"rssi_min": -116,
+			"rssi_max": -116,
+			"rssi_avg": -116
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa09be3ae379",
+			"count": 1,
+			"rssi_raw": 50,
+			"rssi_min": 50,
+			"rssi_max": 50,
+			"rssi_avg": 50
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a41529a9a98e",
+			"count": 1,
+			"rssi_raw": -46,
+			"rssi_min": -46,
+			"rssi_max": -46,
+			"rssi_avg": -46
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b23663bb7f1c",
+			"count": 1,
+			"rssi_raw": 67,
+			"rssi_min": 67,
+			"rssi_max": 67,
+			"rssi_avg": 67
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a6598335981f",
+			"count": 1,
+			"rssi_raw": 89,
+			"rssi_min": 89,
+			"rssi_max": 89,
+			"rssi_avg": 89
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c8598335981f",
+			"count": 1,
+			"rssi_raw": 89,
+			"rssi_min": 89,
+			"rssi_max": 89,
+			"rssi_avg": 89
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c808f73a73cd",
+			"count": 1,
+			"rssi_raw": -10,
+			"rssi_min": -10,
+			"rssi_max": -10,
+			"rssi_avg": -10
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a020683dfcc7",
+			"count": 1,
+			"rssi_raw": -12,
+			"rssi_min": -12,
+			"rssi_max": -12,
+			"rssi_avg": -12
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a24ca2af0ffd",
+			"count": 1,
+			"rssi_raw": -105,
+			"rssi_min": -105,
+			"rssi_max": -105,
+			"rssi_avg": -105
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "be4ca2af0ffd",
+			"count": 1,
+			"rssi_raw": -105,
+			"rssi_min": -105,
+			"rssi_max": -105,
+			"rssi_avg": -105
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "be3f97939c53",
+			"count": 1,
+			"rssi_raw": -61,
+			"rssi_min": -61,
+			"rssi_max": -61,
+			"rssi_avg": -61
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "9a33c79529e8",
+			"count": 1,
+			"rssi_raw": 82,
+			"rssi_min": 82,
+			"rssi_max": 82,
+			"rssi_avg": 82
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c270e2f580b3",
+			"count": 1,
+			"rssi_raw": 47,
+			"rssi_min": 47,
+			"rssi_max": 47,
+			"rssi_avg": 47
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b670e2f580b3",
+			"count": 1,
+			"rssi_raw": 47,
+			"rssi_min": 47,
+			"rssi_max": 47,
+			"rssi_avg": 47
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b6c0238d6cd0",
+			"count": 1,
+			"rssi_raw": -15,
+			"rssi_min": -15,
+			"rssi_max": -15,
+			"rssi_avg": -15
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ac49f323b470",
+			"count": 1,
+			"rssi_raw": -61,
+			"rssi_min": -61,
+			"rssi_max": -61,
+			"rssi_avg": -61
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a66b5e8d3d97",
+			"count": 1,
+			"rssi_raw": -35,
+			"rssi_min": -35,
+			"rssi_max": -35,
+			"rssi_avg": -35
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "9e249237d1dd",
+			"count": 1,
+			"rssi_raw": -23,
+			"rssi_min": -23,
+			"rssi_max": -23,
+			"rssi_avg": -23
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c0c0238d6cd0",
+			"count": 1,
+			"rssi_raw": -15,
+			"rssi_min": -15,
+			"rssi_max": -15,
+			"rssi_avg": -15
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ac080a04db6a",
+			"count": 1,
+			"rssi_raw": -31,
+			"rssi_min": -31,
+			"rssi_max": -31,
+			"rssi_avg": -31
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "bc249237d1dd",
+			"count": 1,
+			"rssi_raw": -23,
+			"rssi_min": -23,
+			"rssi_max": -23,
+			"rssi_avg": -23
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c033c79529e8",
+			"count": 1,
+			"rssi_raw": 82,
+			"rssi_min": 82,
+			"rssi_max": 82,
+			"rssi_avg": 82
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ca518a984a19",
+			"count": 1,
+			"rssi_raw": 16,
+			"rssi_min": 16,
+			"rssi_max": 16,
+			"rssi_avg": 16
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a0249237d1dd",
+			"count": 1,
+			"rssi_raw": -23,
+			"rssi_min": -23,
+			"rssi_max": -23,
+			"rssi_avg": -23
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b6e45f015ec2",
+			"count": 1,
+			"rssi_raw": -70,
+			"rssi_min": -70,
+			"rssi_max": -70,
+			"rssi_avg": -70
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "eae45f015ec2",
+			"count": 1,
+			"rssi_raw": -70,
+			"rssi_min": -70,
+			"rssi_max": -70,
+			"rssi_avg": -70
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ea080a04db6a",
+			"count": 1,
+			"rssi_raw": -31,
+			"rssi_min": -31,
+			"rssi_max": -31,
+			"rssi_avg": -31
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c0249237d1dd",
+			"count": 1,
+			"rssi_raw": -23,
+			"rssi_min": -23,
+			"rssi_max": -23,
+			"rssi_avg": -23
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c04967271aa9",
+			"count": 1,
+			"rssi_raw": -105,
+			"rssi_min": -105,
+			"rssi_max": -105,
+			"rssi_avg": -105
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c44967271aa9",
+			"count": 1,
+			"rssi_raw": -105,
+			"rssi_min": -105,
+			"rssi_max": -105,
+			"rssi_avg": -105
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c424e7ccd8a8",
+			"count": 1,
+			"rssi_raw": -44,
+			"rssi_min": -44,
+			"rssi_max": -44,
+			"rssi_avg": -44
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b06ffe65617a",
+			"count": 1,
+			"rssi_raw": 120,
+			"rssi_min": 120,
+			"rssi_max": 120,
+			"rssi_avg": 120
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c8c9748ce43b",
+			"count": 1,
+			"rssi_raw": 6,
+			"rssi_min": 6,
+			"rssi_max": 6,
+			"rssi_avg": 6
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c66517672106",
+			"count": 1,
+			"rssi_raw": -14,
+			"rssi_min": -14,
+			"rssi_max": -14,
+			"rssi_avg": -14
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c66517672106",
+			"count": 1,
+			"rssi_raw": -14,
+			"rssi_min": -14,
+			"rssi_max": -14,
+			"rssi_avg": -14
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c6481a9f428d",
+			"count": 1,
+			"rssi_raw": -87,
+			"rssi_min": -87,
+			"rssi_max": -87,
+			"rssi_avg": -87
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "bc39deb67dfe",
+			"count": 1,
+			"rssi_raw": 31,
+			"rssi_min": 31,
+			"rssi_max": 31,
+			"rssi_avg": 31
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c45eeab3fb20",
+			"count": 1,
+			"rssi_raw": -109,
+			"rssi_min": -109,
+			"rssi_max": -109,
+			"rssi_avg": -109
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ba4a9675c0ef",
+			"count": 1,
+			"rssi_raw": -114,
+			"rssi_min": -114,
+			"rssi_max": -114,
+			"rssi_avg": -114
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c84a9675c0ef",
+			"count": 1,
+			"rssi_raw": -114,
+			"rssi_min": -114,
+			"rssi_max": -114,
+			"rssi_avg": -114
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ca051adfe79f",
+			"count": 1,
+			"rssi_raw": -85,
+			"rssi_min": -85,
+			"rssi_max": -85,
+			"rssi_avg": -85
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a8080a04db6a",
+			"count": 1,
+			"rssi_raw": -31,
+			"rssi_min": -31,
+			"rssi_max": -31,
+			"rssi_avg": -31
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "becc6ea43f6d",
+			"count": 1,
+			"rssi_raw": -50,
+			"rssi_min": -50,
+			"rssi_max": -50,
+			"rssi_avg": -50
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b433c79529e8",
+			"count": 1,
+			"rssi_raw": 82,
+			"rssi_min": 82,
+			"rssi_max": 82,
+			"rssi_avg": 82
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c6c2180357aa",
+			"count": 1,
+			"rssi_raw": -116,
+			"rssi_min": -116,
+			"rssi_max": -116,
+			"rssi_avg": -116
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a47ba7a723dd",
+			"count": 1,
+			"rssi_raw": -119,
+			"rssi_min": -119,
+			"rssi_max": -119,
+			"rssi_avg": -119
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a43ce315e069",
+			"count": 1,
+			"rssi_raw": 31,
+			"rssi_min": 31,
+			"rssi_max": 31,
+			"rssi_avg": 31
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c83b57024860",
+			"count": 1,
+			"rssi_raw": 35,
+			"rssi_min": 35,
+			"rssi_max": 35,
+			"rssi_avg": 35
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b46f6e23188e",
+			"count": 1,
+			"rssi_raw": -116,
+			"rssi_min": -116,
+			"rssi_max": -116,
+			"rssi_avg": -116
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b6249237d1dd",
+			"count": 1,
+			"rssi_raw": -23,
+			"rssi_min": -23,
+			"rssi_max": -23,
+			"rssi_avg": -23
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c25c4631d369",
+			"count": 1,
+			"rssi_raw": -110,
+			"rssi_min": -110,
+			"rssi_max": -110,
+			"rssi_avg": -110
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b0481a9f428d",
+			"count": 1,
+			"rssi_raw": -87,
+			"rssi_min": -87,
+			"rssi_max": -87,
+			"rssi_avg": -87
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a6c2180357aa",
+			"count": 1,
+			"rssi_raw": -116,
+			"rssi_min": -116,
+			"rssi_max": -116,
+			"rssi_avg": -116
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a42449911d0c",
+			"count": 1,
+			"rssi_raw": 26,
+			"rssi_min": 26,
+			"rssi_max": 26,
+			"rssi_avg": 26
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b470b13dd0ac",
+			"count": 1,
+			"rssi_raw": -53,
+			"rssi_min": -53,
+			"rssi_max": -53,
+			"rssi_avg": -53
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "9e5f5db8fc48",
+			"count": 1,
+			"rssi_raw": 71,
+			"rssi_min": 71,
+			"rssi_max": 71,
+			"rssi_avg": 71
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "cc5f5db8fc48",
+			"count": 1,
+			"rssi_raw": 71,
+			"rssi_min": 71,
+			"rssi_max": 71,
+			"rssi_avg": 71
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "cc3621a330f3",
+			"count": 1,
+			"rssi_raw": -29,
+			"rssi_min": -29,
+			"rssi_max": -29,
+			"rssi_avg": -29
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a65c4631d369",
+			"count": 1,
+			"rssi_raw": -110,
+			"rssi_min": -110,
+			"rssi_max": -110,
+			"rssi_avg": -110
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "ac70e2f580b3",
+			"count": 1,
+			"rssi_raw": 47,
+			"rssi_min": 47,
+			"rssi_max": 47,
+			"rssi_avg": 47
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b6c0238d6cd0",
+			"count": 1,
+			"rssi_raw": -15,
+			"rssi_min": -15,
+			"rssi_max": -15,
+			"rssi_avg": -15
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a83bca5731d7",
+			"count": 1,
+			"rssi_raw": 117,
+			"rssi_min": 117,
+			"rssi_max": 117,
+			"rssi_avg": 117
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa766e0847cb",
+			"count": 1,
+			"rssi_raw": 60,
+			"rssi_min": 60,
+			"rssi_max": 60,
+			"rssi_avg": 60
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a21b00194239",
+			"count": 1,
+			"rssi_raw": -75,
+			"rssi_min": -75,
+			"rssi_max": -75,
+			"rssi_avg": -75
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a67fca76f310",
+			"count": 1,
+			"rssi_raw": 117,
+			"rssi_min": 117,
+			"rssi_max": 117,
+			"rssi_avg": 117
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a65729d559fa",
+			"count": 1,
+			"rssi_raw": 24,
+			"rssi_min": 24,
+			"rssi_max": 24,
+			"rssi_avg": 24
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a65729d559fa",
+			"count": 1,
+			"rssi_raw": 24,
+			"rssi_min": 24,
+			"rssi_max": 24,
+			"rssi_avg": 24
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a63663bb7f1c",
+			"count": 1,
+			"rssi_raw": 67,
+			"rssi_min": 67,
+			"rssi_max": 67,
+			"rssi_avg": 67
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a0503ad016a1",
+			"count": 1,
+			"rssi_raw": -119,
+			"rssi_min": -119,
+			"rssi_max": -119,
+			"rssi_avg": -119
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "aa70e2f580b3",
+			"count": 1,
+			"rssi_raw": 47,
+			"rssi_min": 47,
+			"rssi_max": 47,
+			"rssi_avg": 47
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "b86d5aadce86",
+			"count": 1,
+			"rssi_raw": -44,
+			"rssi_min": -44,
+			"rssi_max": -44,
+			"rssi_avg": -44
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "a26d5aadce86",
+			"count": 1,
+			"rssi_raw": -44,
+			"rssi_min": -44,
+			"rssi_max": -44,
+			"rssi_avg": -44
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c0238d6cd0f1",
+			"count": 1,
+			"rssi_raw": -86,
+			"rssi_min": -86,
+			"rssi_max": -86,
+			"rssi_avg": -86
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "543ad66a90ad",
+			"count": 1,
+			"rssi_raw": -90,
+			"rssi_min": -90,
+			"rssi_max": -90,
+			"rssi_avg": -90
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5eeab3fb2093",
+			"count": 1,
+			"rssi_raw": -54,
+			"rssi_min": -54,
+			"rssi_max": -54,
+			"rssi_avg": -54
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "09be3ae37932",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "4967271aa997",
+			"count": 1,
+			"rssi_raw": -62,
+			"rssi_min": -62,
+			"rssi_max": -62,
+			"rssi_avg": -62
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "4ca2af0ffd97",
+			"count": 1,
+			"rssi_raw": -60,
+			"rssi_min": -60,
+			"rssi_max": -60,
+			"rssi_avg": -60
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "249237d1dde9",
+			"count": 1,
+			"rssi_raw": -62,
+			"rssi_min": -62,
+			"rssi_max": -62,
+			"rssi_avg": -62
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6ffe65617a78",
+			"count": 1,
+			"rssi_raw": -58,
+			"rssi_min": -58,
+			"rssi_max": -58,
+			"rssi_avg": -58
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "3ce315e0691f",
+			"count": 1,
+			"rssi_raw": -54,
+			"rssi_min": -54,
+			"rssi_max": -54,
+			"rssi_avg": -54
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6f6e23188e8c",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "2449911d0c1a",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6f4898d95182",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6f4898d95182",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5729d559fa18",
+			"count": 1,
+			"rssi_raw": -96,
+			"rssi_min": -96,
+			"rssi_max": -96,
+			"rssi_avg": -96
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5729d559fa18",
+			"count": 1,
+			"rssi_raw": -94,
+			"rssi_min": -94,
+			"rssi_max": -94,
+			"rssi_avg": -94
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "3663bb7f1c43",
+			"count": 1,
+			"rssi_raw": -96,
+			"rssi_min": -96,
+			"rssi_max": -96,
+			"rssi_avg": -96
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "598335981f59",
+			"count": 1,
+			"rssi_raw": -64,
+			"rssi_min": -64,
+			"rssi_max": -64,
+			"rssi_avg": -64
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "598335981f59",
+			"count": 1,
+			"rssi_raw": -64,
+			"rssi_min": -64,
+			"rssi_max": -64,
+			"rssi_avg": -64
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "3b5702486023",
+			"count": 1,
+			"rssi_raw": -74,
+			"rssi_min": -74,
+			"rssi_max": -74,
+			"rssi_avg": -74
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5c4631d36992",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5c4631d36992",
+			"count": 1,
+			"rssi_raw": -80,
+			"rssi_min": -80,
+			"rssi_max": -80,
+			"rssi_avg": -80
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "481a9f428da9",
+			"count": 1,
+			"rssi_raw": -68,
+			"rssi_min": -68,
+			"rssi_max": -68,
+			"rssi_avg": -68
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "481a9f428da9",
+			"count": 1,
+			"rssi_raw": -68,
+			"rssi_min": -68,
+			"rssi_max": -68,
+			"rssi_avg": -68
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "7ba7a723dd89",
+			"count": 1,
+			"rssi_raw": -88,
+			"rssi_min": -88,
+			"rssi_max": -88,
+			"rssi_avg": -88
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "24e7ccd8a8d4",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6517672106f2",
+			"count": 1,
+			"rssi_raw": -62,
+			"rssi_min": -62,
+			"rssi_max": -62,
+			"rssi_avg": -62
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "11327da731fd",
+			"count": 1,
+			"rssi_raw": -86,
+			"rssi_min": -86,
+			"rssi_max": -86,
+			"rssi_avg": -86
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "1ad1bcdbe089",
+			"count": 1,
+			"rssi_raw": -90,
+			"rssi_min": -90,
+			"rssi_max": -90,
+			"rssi_avg": -90
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6f6e23188e8c",
+			"count": 1,
+			"rssi_raw": -76,
+			"rssi_min": -76,
+			"rssi_max": -76,
+			"rssi_avg": -76
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "4ca2af0ffd97",
+			"count": 1,
+			"rssi_raw": -60,
+			"rssi_min": -60,
+			"rssi_max": -60,
+			"rssi_avg": -60
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "29880a1a96b2",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "098d302d77f6",
+			"count": 1,
+			"rssi_raw": -96,
+			"rssi_min": -96,
+			"rssi_max": -96,
+			"rssi_avg": -96
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "040434e18174",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "051adfe79fab",
+			"count": 1,
+			"rssi_raw": -88,
+			"rssi_min": -88,
+			"rssi_max": -88,
+			"rssi_avg": -88
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "08f73a73cdf6",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "e45f015ec2ba",
+			"count": 1,
+			"rssi_raw": -22,
+			"rssi_min": -22,
+			"rssi_max": -22,
+			"rssi_avg": -22
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "e45f015ec2ba",
+			"count": 1,
+			"rssi_raw": -22,
+			"rssi_min": -22,
+			"rssi_max": -22,
+			"rssi_avg": -22
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5f5db8fc4847",
+			"count": 1,
+			"rssi_raw": -66,
+			"rssi_min": -66,
+			"rssi_max": -66,
+			"rssi_avg": -66
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "5f5db8fc4847",
+			"count": 1,
+			"rssi_raw": -66,
+			"rssi_min": -66,
+			"rssi_max": -66,
+			"rssi_avg": -66
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "70e2f580b32f",
+			"count": 1,
+			"rssi_raw": -86,
+			"rssi_min": -86,
+			"rssi_max": -86,
+			"rssi_avg": -86
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "70e2f580b32f",
+			"count": 1,
+			"rssi_raw": -86,
+			"rssi_min": -86,
+			"rssi_max": -86,
+			"rssi_avg": -86
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6517672106f2",
+			"count": 1,
+			"rssi_raw": -70,
+			"rssi_min": -70,
+			"rssi_max": -70,
+			"rssi_avg": -70
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "50017b9a3c8d",
+			"count": 1,
+			"rssi_raw": -84,
+			"rssi_min": -84,
+			"rssi_max": -84,
+			"rssi_avg": -84
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "50017b9a3c8d",
+			"count": 1,
+			"rssi_raw": -84,
+			"rssi_min": -84,
+			"rssi_max": -84,
+			"rssi_avg": -84
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "503ad016a189",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "766e0847cb3c",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6a402a322fd8",
+			"count": 1,
+			"rssi_raw": -98,
+			"rssi_min": -98,
+			"rssi_max": -98,
+			"rssi_avg": -98
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6a402a322fd8",
+			"count": 1,
+			"rssi_raw": -98,
+			"rssi_min": -98,
+			"rssi_max": -98,
+			"rssi_avg": -98
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "1b00194239b5",
+			"count": 1,
+			"rssi_raw": -88,
+			"rssi_min": -88,
+			"rssi_max": -88,
+			"rssi_avg": -88
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "cc6ea43f6dce",
+			"count": 1,
+			"rssi_raw": -62,
+			"rssi_min": -62,
+			"rssi_max": -62,
+			"rssi_avg": -62
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "080a04db6ae1",
+			"count": 1,
+			"rssi_raw": -62,
+			"rssi_min": -62,
+			"rssi_max": -62,
+			"rssi_avg": -62
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "c2180357aa8c",
+			"count": 1,
+			"rssi_raw": -90,
+			"rssi_min": -90,
+			"rssi_max": -90,
+			"rssi_avg": -90
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "4d0efa4032a9",
+			"count": 1,
+			"rssi_raw": -90,
+			"rssi_min": -90,
+			"rssi_max": -90,
+			"rssi_avg": -90
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6d5aadce86d4",
+			"count": 1,
+			"rssi_raw": -94,
+			"rssi_min": -94,
+			"rssi_max": -94,
+			"rssi_avg": -94
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "503ad016a189",
+			"count": 1,
+			"rssi_raw": -82,
+			"rssi_min": -82,
+			"rssi_max": -82,
+			"rssi_avg": -82
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "59ec71a26d1c",
+			"count": 1,
+			"rssi_raw": -98,
+			"rssi_min": -98,
+			"rssi_max": -98,
+			"rssi_avg": -98
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "3621a330f3e3",
+			"count": 1,
+			"rssi_raw": -80,
+			"rssi_min": -80,
+			"rssi_max": -80,
+			"rssi_avg": -80
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "6024ca62ed13",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "30d3e3ee0998",
+			"count": 1,
+			"rssi_raw": -98,
+			"rssi_min": -98,
+			"rssi_max": -98,
+			"rssi_avg": -98
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "080a04db6ae1",
+			"count": 1,
+			"rssi_raw": -70,
+			"rssi_min": -70,
+			"rssi_max": -70,
+			"rssi_avg": -70
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "715ddba5c707",
+			"count": 1,
+			"rssi_raw": -54,
+			"rssi_min": -54,
+			"rssi_max": -54,
+			"rssi_avg": -54
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "33c79529e852",
+			"count": 1,
+			"rssi_raw": -54,
+			"rssi_min": -54,
+			"rssi_max": -54,
+			"rssi_avg": -54
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "3bca5731d775",
+			"count": 1,
+			"rssi_raw": -98,
+			"rssi_min": -98,
+			"rssi_max": -98,
+			"rssi_avg": -98
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "4ad3049c91fc",
+			"count": 1,
+			"rssi_raw": -100,
+			"rssi_min": -100,
+			"rssi_max": -100,
+			"rssi_avg": -100
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "cc6ea43f6dce",
+			"count": 1,
+			"rssi_raw": -74,
+			"rssi_min": -74,
+			"rssi_max": -74,
+			"rssi_avg": -74
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "30d3e3ee0998",
+			"count": 1,
+			"rssi_raw": -92,
+			"rssi_min": -92,
+			"rssi_max": -92,
+			"rssi_avg": -92
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "7fca76f31075",
+			"count": 1,
+			"rssi_raw": -90,
+			"rssi_min": -90,
+			"rssi_max": -90,
+			"rssi_avg": -90
+		},
+		{
+			"tech": "ble",
+			"ssid": "",
+			"mac": "080a04db6ae1",
+			"count": 1,
+			"rssi_raw": -62,
+			"rssi_min": -62,
+			"rssi_max": -62,
+			"rssi_avg": -62
+		}
+
+	]
+}
