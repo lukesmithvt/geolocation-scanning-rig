@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://googlechrome.github.io/samples/web-bluetooth/get-devices.html -->
+<html lang="en" ml-update="aware">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Sacn rig sample">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sacn rig sample</title>
+
+
+  <style type="text/css">
+    #_copy {
+      align-items: center;
+      background: #4494d5;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-size: 13px;
+      height: 30px;
+      justify-content: center;
+      position: absolute;
+      width: 60px;
+      z-index: 1000
+    }
+
+    #select-tooltip,
+    #sfModal,
+    .modal-backdrop,
+    div[id^=reader-helper] {
+      display: none !important
+    }
+
+    .modal-open {
+      overflow: auto !important
+    }
+
+    ._sf_adjust_body {
+      padding-right: 0 !important
+    }
+
+    .super_copy_btns_div {
+      position: fixed;
+      width: 154px;
+      left: 10px;
+      top: 45%;
+      background: #e7f1ff;
+      border: 2px solid #4595d5;
+      font-weight: 600;
+      border-radius: 2px;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      z-index: 5000
+    }
+
+    .super_copy_btns_logo {
+      width: 100%;
+      background: #4595d5;
+      text-align: center;
+      font-size: 12px;
+      color: #e7f1ff;
+      line-height: 30px;
+      height: 30px
+    }
+
+    .super_copy_btns_btn {
+      display: block;
+      width: 128px;
+      height: 28px;
+      background: #7f5711;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 12px;
+      border: 0;
+      outline: 0;
+      margin: 8px auto;
+      font-weight: 700;
+      cursor: pointer;
+      opacity: .9
+    }
+
+    .super_copy_btns_btn:hover {
+      opacity: .8
+    }
+
+    .super_copy_btns_btn:active {
+      opacity: 1
+    }
+
+    #inputvalue {
+      display: none;
+    }
+
+    hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__ {
+      border: 1px dotted
+    }
+
+
+    input[type=text] {
+      width: 50%;
+      height: 24px;
+      border: 1px solid #7791A0;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    #labelpoi {
+      margin-top: 10px;
+    }
+
+    #requestBluetoothDevice {
+      margin-top: 8%;
+      background-color: #fff;
+      margin: 15px;
+      height: 50px;
+      border-radius: 5px;
+      -webkit-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      -moz-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+    }
+
+    #pointofinterest {
+      margin-top: 5%;
+      margin-bottom: 100px;
+      background-color: #fff;
+      height: 28px;
+      border-radius: 5px;
+      -webkit-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      -moz-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+    }
+
+    #groupnumber {
+      margin-top: 5%;
+      background-color: #fff;
+      height: 28px;
+      border-radius: 5px;
+      -webkit-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      -moz-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+    }
+
+    #propertyname {
+      margin-top: 5%;
+      background-color: #fff;
+      height: 28px;
+      border-radius: 5px;
+      -webkit-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      -moz-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+    }
+
+    #displayLog {
+      background-color: #fff;
+      height: 50px;
+      border-radius: 5px;
+      -webkit-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      -moz-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+    }
+
+    #Submit {
+      height: 40px;
+      width: 30%;
+      background-color: #fff;
+      border: 1px solid #7791A0;
+      border-radius: 6px;
+      -webkit-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      -moz-box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+      box-shadow: rgb(214, 214, 214) 0px 0px 7px;
+    }
+
+    #output {
+      display: none;
+      color: #000;
+    }
+
+    #circle {
+      width: 140px;
+      height: 140px;
+      margin: -245px 119px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: #7791A0;
+      text-align: center;
+      line-height: 140px;
+      font-size: 30px;
+      color: #f2f1f0;
+    }
+
+    .circle_process {
+      position: relative;
+      margin: 35% 24% 20% 24%;
+      width: 199px;
+      height: 200px;
+    }
+
+    .circle_process .wrapper {
+      width: 100px;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+    }
+
+    .circle_process .right {
+      right: 0;
+    }
+
+    .circle_process .left {
+      left: 0;
+    }
+
+    .circle_process .circle {
+      width: 160px;
+      height: 160px;
+      border: 20px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      transform: rotate(-135deg);
+    }
+
+    #rightcircle {
+      border-top: 20px solid #A3B295;
+      border-right: 20px solid #A3B295;
+      right: 0;
+      -webkit-animation: circle_right 5s linear;
+      animation-play-state: paused;
+
+    }
+
+    #leftcircle {
+      border-bottom: 20px solid #A3B295;
+      border-left: 20px solid #A3B295;
+      left: 0;
+      -webkit-animation: circle_left 5s linear;
+      animation-play-state: paused;
+
+    }
+
+    @-webkit-keyframes circle_right {
+      0% {
+        -webkit-transform: rotate(-135deg);
+      }
+
+      50%,
+      100% {
+        -webkit-transform: rotate(45deg);
+      }
+    }
+
+    @-webkit-keyframes circle_left {
+
+      0%,
+      50% {
+        -webkit-transform: rotate(-135deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(45deg);
+      }
+    }
+
+    .graph {
+      margin-top: 40px;
+      position:absolute;
+    }
+
+    .tooltip {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      
+    }
+
+    .tooltip{
+      opacity: 0;
+      -webkit-transition: opacity .75s ease-in-out;
+      -moz-transition: opacity .75s ease-in-out;
+      transition: opacity .75s ease-in-out;
+      
+      background: #333;
+      background: rgba(0, 0, 0, .8);
+      border-radius: 5px;
+      color: #fff;
+      content: attr(title);
+      left: 20%;
+      padding: 5px 15px;
+      z-index: 98;
+      width: 220px;
+
+    }
+
+    #poiinput {
+      display: none;
+      width: 260px;
+      margin-left: 60px;
+      border: none;
+      background-color: #F7F7F7;
+      border-bottom: 2px solid #7791A0;
+      height: 25px;
+    }
+
+    #scanb {
+      display: none;
+    }
+
+    #logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      margin-bottom: 80px;
+
+      width: 50%;
+    }
+
+    #pairbox {
+      margin-top: 50%;
+      background-color: #F7F7F7;
+      padding-bottom: 20px;
+      border-radius:20px;
+    }
+
+    #mainbody {
+      font-family: Arial, sans-serif;
+      background-image: url("https://image.winudf.com/v2/image1/Y29tLkFsRmFqckRldmVsb3Blci5CbGFja1dhbGxwYXBlckhEX3NjcmVlbl8xNF8xNTY3MjU0NDQyXzAyNg/screen-0.jpg?fakeurl=1&type=.jpg");
+    }
+
+    #blload {
+      display: none;
+    }
+
+    #loader {
+        border: 5px solid #f3f3f3;
+        margin-left: 30%;
+        margin-right: 20px;
+        vertical-align: middle;
+        border-top: 5px solid #555;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        animation: spin 2s linear infinite;
+    }
+ 
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body id="mainbody" _c_t_common="1" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="" _c_t_j1="1"
+  data-new-gr-c-s-loaded="14.1058.0" style="background-color: #F7F7F7;">
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const searchParams = new URL(location).searchParams;
+      const inputs = Array.from(document.querySelectorAll('input[id]'));
+
+      inputs.forEach(input => {
+        if (searchParams.has(input.id)) {
+          if (input.type == 'checkbox') {
+            input.checked = searchParams.get(input.id);
+          } else {
+            input.value = searchParams.get(input.id);
+            input.blur();
+          }
+        }
+        if (input.type == 'checkbox') {
+          input.addEventListener('change', function (event) {
+            const newSearchParams = new URL(location).searchParams;
+            if (event.target.checked) {
+              newSearchParams.set(input.id, event.target.checked);
+            } else {
+              newSearchParams.delete(input.id);
+            }
+            history.replaceState({}, '', Array.from(newSearchParams).length ?
+              location.pathname + '?' + newSearchParams : location.pathname);
+          });
+        } else {
+          input.addEventListener('input', function (event) {
+            const newSearchParams = new URL(location).searchParams;
+            if (event.target.value) {
+              newSearchParams.set(input.id, event.target.value);
+            } else {
+              newSearchParams.delete(input.id);
+            }
+            history.replaceState({}, '', Array.from(newSearchParams).length ?
+              location.pathname + '?' + newSearchParams : location.pathname);
+          });
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+    var ChromeSamples = {
+      log: function () {
+        var line = Array.prototype.slice.call(arguments).map(function (argument) {
+          return typeof argument === 'string' ? argument : JSON.stringify(argument);
+        }).join(' ');
+
+        document.querySelector('#log').textContent += line + '\n';
+      },
+
+      clearLog: function () {
+        document.querySelector('#log').textContent = '';
+      },
+
+      setStatus: function (status) {
+        document.querySelector('#status').textContent = status;
+      },
+
+      setContent: function (newContent) {
+        var content = document.querySelector('#content');
+        while (content.hasChildNodes()) {
+          content.removeChild(content.lastChild);
+        }
+        content.appendChild(newContent);
+      }
+    };
+  </script>
+
+  <div id="pairing">
+    <p style="text-align: center;margin-top: 20%;font-size: 25px;color:#F7F7F7;">Welcome back, dear customer</p>
+    <p style="text-align: center;margin-top: 10%;font-size: 18px;color:#F7F7F7;">Step1: Pairing with devices</p>
+
+    <div id = "pairbox">
+      <h2 style="text-align: center;margin-top: 10%;padding-top: 50px;">PwC Scanning Rig</h2>
+
+
+      <img id="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/PricewaterhouseCoopers_Logo.svg/2560px-PricewaterhouseCoopers_Logo.svg.png">
+
+      <div id="blload"><div id="loader"></div><p style="display: inline-block;">Pairing.....</p></div>
+      <p>
+        <div id="requestBluetoothDevice" onclick="blList()">
+          <svg t="1651374928364" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="1648" width="32" height="32" style="margin: 10px 0px 0px 10px;float:left;">
+            <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" p-id="1649" fill="#A5B2BA"
+              data-spm-anchor-id="a313x.7781069.0.i10" class=""></path>
+            <path
+              d="M703.3 408.1c0-16.7-8.7-31.8-23.2-40.1l-115.7-66.8c-14.5-8.4-31.9-8.4-46.3 0-14.5 8.4-23.2 23.4-23.2 40.1v132l-146.3-112c-7.6-5.9-18.4-4.4-24.2 3.3-5.9 7.6-4.4 18.4 3.3 24.2l160.5 122.9-160.6 122.8c-7.6 5.9-9 16.7-3.3 24.2 3.4 4.5 8.5 6.7 13.7 6.7 3.7 0 7.4-1.1 10.6-3.6l146.3-112v132.7c0 16.7 8.7 31.8 23.2 40.1 7.2 4.1 15.2 6.3 23.2 6.3s15.9-2.1 23.2-6.3L680.1 656c14.5-8.4 23.2-23.4 23.2-40.1 0-16.7-8.7-31.8-23.2-40.1l-110.5-63.9L680.1 448c14.5-8.2 23.2-23.3 23.2-39.9z m-34.7 207.8c0 2-0.6 7.1-5.8 10.2l-115.7 66.8c-5.3 3.1-9.9 1-11.7 0-1.8-1-5.9-4.1-5.9-10.2V549.1c0-6.1 4.1-9.2 5.9-10.2 1.1-0.7 3.3-1.6 5.9-1.6 1.8 0 3.7 0.4 5.8 1.6l115.7 66.9c5.2 3.1 5.8 8.1 5.8 10.1z m-5.8-197.7L547.1 485c-5.3 3.1-9.9 1-11.7 0-1.8-1-5.9-4.1-5.9-10.2V341.2c0-6.1 4.1-9.2 5.9-10.2 1.1-0.6 3.3-1.6 5.9-1.6 1.8 0 3.7 0.4 5.8 1.6l115.7 66.9c5.3 3.1 5.9 8 5.9 10.2-0.1 2-0.7 7-5.9 10.1z"
+              fill="#ffffff" p-id="1650" data-spm-anchor-id="a313x.7781069.0.i8" class="selected"></path>
+            <path
+              d="M811.5 385.5c-16.4-38.7-39.7-73.5-69.6-103.3-29.9-29.8-64.6-53.3-103.3-69.6-40.1-17-82.7-25.6-126.6-25.6s-86.4 8.6-126.5 25.5c-38.7 16.4-73.5 39.7-103.3 69.6s-53.3 64.6-69.6 103.3c-17 40.1-25.6 82.7-25.6 126.6s8.6 86.5 25.5 126.5c16.4 38.7 39.7 73.5 69.6 103.3 29.9 29.8 64.6 53.3 103.3 69.6C425.6 828.4 468 837 512 837s86.5-8.6 126.5-25.5c38.7-16.4 73.5-39.7 103.3-69.6 29.8-29.9 53.3-64.6 69.6-103.3C828.4 598.5 837 556 837 512s-8.6-86.4-25.5-126.5zM512 802.4c-160.1 0-290.4-130.2-290.4-290.4S351.9 221.6 512 221.6 802.4 351.9 802.4 512 672.1 802.4 512 802.4z"
+              fill="#ffffff" p-id="1651" data-spm-anchor-id="a313x.7781069.0.i9" class="selected"></path>
+          </svg>
+          <a style="float: left;margin: 16px;">Pair Bluetooth Device</a>
+          <svg t="1651375496174" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3195" width="32" height="32" style="float:right;margin-top: 10px;">
+            <path
+              d="M334.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l288.64-288.64A50.56 50.56 0 0 0 704 512a47.36 47.36 0 0 0-14.08-33.28L401.28 192a47.36 47.36 0 0 0-67.2 0z"
+              p-id="3196" fill="#A5B2BA"></path>
+          </svg>
+        </div>
+      </p>
+    </div>
+  </div>
+
+  <div id="inputvalue">
+    <a id="toolbox" class="tooltip" title=""> </a>
+    <h3>
+      <center>POI Info Input</center>
+    </h3>
+    <p>
+      <div id="propertyname">
+        <center>
+          <label>Property Name:
+            <input type="text" id="pname" placeholder="Please enter.."></label>
+        </center>
+      </div>
+      <div id="groupnumber">
+        <center>
+          <label>Group Number:
+            <input type="text" id="gnum" placeholder="Please enter.."></label>
+        </center>
+      </div>
+
+      <div id="pointofinterest">
+        <center>
+          <label>Point of Interest:
+            <input type="text" id="poi" placeholder="Please enter and submit.."></label>
+        </center>
+      </div>
+      <center>
+        <button id="Submit" onclick="printto();changeValue()">Submit</button>
+      </center>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <center>
+        <p id="disp1">Current Property: N/A</p>
+        <p id="disp2">Current Group: N/A</p>
+        <p id="disp3">Current POI: N/A</p>
+      </center>
+  </div>
+
+  <div id="scanb">
+    <div class="circle_process">
+      <div class="wrapper right">
+        <div class="circle rightcircle" id="rightcircle"></div>
+      </div>
+      <div class="wrapper left">
+        <div class="circle leftcircle" id="leftcircle"></div>
+      </div>
+    </div>
+
+
+    <div>
+      <form method="post" name="myform">
+        <input type="button" class="button" value="Scan" id="circle" name="phone" onclick="showtime(5);startscan()">
+      </form>
+    </div>
+
+
+
+    <div id="output" class="output">
+      <div id="content"></div>
+      <div id="status"></div>
+      <pre id="log">loading finished
+</pre>
+    </div>
+
+    <div>
+      <input id="poiinput" placeholder="POI number">
+    </div>
+
+
+
+    <p>
+      <div id="displayLog">
+        <svg t="1651375894287" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="4924" width="32" height="32" style="margin: 10px 0px 0px 10px;float:left;">
+          <path
+            d="M1022.976 558.976a463.808 463.808 0 0 1-463.872 463.872H464.896A463.808 463.808 0 0 1 1.024 558.976V464.96A463.872 463.872 0 0 1 464.896 1.088h94.208a463.936 463.936 0 0 1 463.872 463.872v94.016z"
+            fill="#A5B2BA" p-id="4925" data-spm-anchor-id="a313x.7781069.0.i21" class="selected"></path>
+          <path
+            d="M728.32 165.12c52.224 0 101.696 40.832 103.616 90.496l0.064 3.072v198.656c-2.304 17.728-11.072 26.624-26.048 26.624-14.272 0-22.912-8-26.112-23.936l-0.512-2.752V259.84c0-22.336-25.088-41.6-48.64-42.88l-2.432-0.064h-439.68a43.072 43.072 0 0 0-43.84 39.424l-0.064 2.368v501.248c0 22.272 17.984 45.632 41.152 47.104l2.368 0.128h130.752c17.344 4.352 25.984 12.736 25.984 25.152 0 11.776-7.68 20.224-23.04 25.6l-2.944 0.96H288.192c-52.224 0-94.464-44.864-96.128-94.72L192 761.024V257.472c0-49.984 41.472-90.688 93.312-92.352H728.32z"
+            fill="#ffffff" p-id="4926"></path>
+          <path
+            d="M466.432 591.872a26.112 26.112 0 0 1 26.496 25.728 26.048 26.048 0 0 1-26.112 25.984H378.624a26.112 26.112 0 0 1-26.56-25.6 26.112 26.112 0 0 1 26.112-26.112h88.256zM645.696 446.272a25.984 25.984 0 0 1 26.496 25.664 25.984 25.984 0 0 1-26.112 26.048H377.344a26.112 26.112 0 0 1-26.56-25.664 26.112 26.112 0 0 1 26.176-26.048h268.736zM609.6 285.504a26.176 26.176 0 0 1 26.56 25.728 26.24 26.24 0 0 1-26.176 26.112H376.448a26.176 26.176 0 0 1-26.496-25.728 26.112 26.112 0 0 1 26.112-26.112h233.536zM810.944 640.384c-1.92-10.88-15.808-14.72-23.616-7.104l-66.048 65.984a24.32 24.32 0 0 1-34.112 0l-33.92-33.984a23.872 23.872 0 0 1 0-33.984l66.56-66.24c7.808-7.744 4.032-21.632-6.72-23.616a123.328 123.328 0 0 0-110.912 33.792 121.856 121.856 0 0 0-30.912 122.624 19.264 19.264 0 0 1-4.224 19.392l-67.072 66.88a24.064 24.064 0 0 0 0 33.856l34.112 33.856a24.384 24.384 0 0 0 34.24 0l67.584-67.264a19.712 19.712 0 0 1 19.392-4.608 122.816 122.816 0 0 0 122.048-31.104 122.048 122.048 0 0 0 33.6-108.48z"
+            fill="#ffffff" p-id="4927"></path>
+        </svg>
+        <a style="float: left;margin: 16px;">Show the device log</a>
+        <svg t="1651375496174" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="3195" width="32" height="32" style="float:right;margin-top: 10px;">
+          <path
+            d="M334.08 192a47.36 47.36 0 0 0 0 64l256 256-256 256a47.36 47.36 0 1 0 64 64l288.64-288.64A50.56 50.56 0 0 0 704 512a47.36 47.36 0 0 0-14.08-33.28L401.28 192a47.36 47.36 0 0 0-67.2 0z"
+            p-id="3196" fill="#A5B2BA"></path>
+        </svg>
+      </div>
+    </p>
+  </div>
+  <script>
+    var pna;
+    var gro;
+    var ppp;
+
+    function printto() {
+      //values of POI, group number, and property name
+      pna = document.getElementById('pname').value;
+      gro = document.getElementById('gnum').value;
+      ppp = document.getElementById('poi').value;
+      document.getElementById("disp1").innerHTML = "Current Property: " + pna;
+      document.getElementById("disp2").innerHTML = "Current Group: " + gro;
+      document.getElementById("disp3").innerHTML = "Current POI:" + ppp;
+      //alert(pna + gro + ppp);
+    }
+
+    function alertinfo(info) {
+      document.getElementById('toolbox').setAttribute('style', 'opacity: 1');
+      console.log(info)
+      document.getElementById('toolbox').innerHTML=info;
+      setTimeout("closealert()", 2000)
+    }
+
+    function closealert() {
+      document.getElementById('toolbox').setAttribute('style', 'opacity: 0');
+    }
+
+    var myservice;
+    async function blList() {
+      navigator.bluetooth
+        .requestDevice({
+          filters: [{
+            namePrefix: "The"
+          }],
+          optionalServices: ['00000001-710e-4a5b-8d75-3e5b444bc3cf']
+        })
+        .then(async (device) => {
+          console.log("Name: " + device.name, device);
+          document.getElementById('blload').setAttribute('style', 'display: block');
+          bluetoothDevice = device;
+          bluetoothDevice.addEventListener('gattserverdisconnected', onDisconnected);
+          let server = await device.gatt.connect();
+          console.log(`server`, server);
+          myservice = await server.getPrimaryService('00000001-710e-4a5b-8d75-3e5b444bc3cf');
+          console.log(`service`, myservice);
+          document.getElementById('logo').setAttribute('style', 'margin-bottom: 30px');
+          document.getElementById('pairing').setAttribute('style', 'display: none');
+          document.getElementById('inputvalue').setAttribute('style', 'display: block');
+          document.getElementById('mainbody').setAttribute('style', 'background-image: none');
+          var infoma = "Pairing success!"
+          setTimeout(alertinfo, 100, infoma)
+        })
+        .catch(function (error) {
+          console.log("Something went wrong. " + error);
+        });
+    }
+
+    function connect() {
+      exponentialBackoff(3 /* max retries */, 2 /* seconds delay */,
+        function toTry() {
+          time('Connecting to Bluetooth Device... ');
+          return bluetoothDevice.gatt.connect();
+        },
+        function success() {
+          log('> Bluetooth Device connected. Try disconnect it now.');
+        },
+        function fail() {
+          time('Failed to reconnect.');
+        });
+    }
+
+    function onDisconnected() {
+      console.log('> Bluetooth Device disconnected');
+      connect();
+    }
+
+
+
+    async function changeValue() {
+      service = myservice;
+      let characteristic = await service.getCharacteristic(
+        "00000005-710e-4a5b-8d75-3e5b444bc3cf"
+      );
+      let w1 = await characteristic.writeValueWithResponse(
+        new Uint8Array(
+          new TextEncoder("utf-8").encode(ppp)
+        )
+      );
+      console.log(`poi_num`, ppp);
+
+      let characteristic2 = await service.getCharacteristic(
+        "00000006-710e-4a5b-8d75-3e5b444bc3cf"
+      );
+      let w2 = await characteristic2.writeValueWithResponse(
+        new Uint8Array(
+          new TextEncoder("utf-8").encode(gro)
+        )
+      );
+      console.log(`group_number`, gro);
+
+      let characteristic3 = await service.getCharacteristic(
+        "00000007-710e-4a5b-8d75-3e5b444bc3cf"
+      );
+      let w3 = await characteristic3.writeValueWithResponse(
+        new Uint8Array(
+          new TextEncoder("utf-8").encode(pna)
+        )
+      );
+      console.log(`proporty_name`, pna);
+      document.getElementById('scanb').setAttribute('style', 'display: block');
+      var infoma = "Success! Please start scanning"
+      setTimeout(alertinfo, 100, infoma)
+    }
+
+    async function startscan() {
+      let characteristic = await service.getCharacteristic(
+        "00000004-710e-4a5b-8d75-3e5b444bc3cf"
+      );
+      let w = await characteristic.writeValueWithResponse(
+        new Uint8Array(
+          new TextEncoder("utf-8").encode("1")
+        )
+      );
+      console.log(`scan start`);
+    }
+
+    var secs = 5;
+
+    function showtime(t) {
+      const running = rightcircle.style.animationPlayState || "paused";
+      console.log(running);
+      rightcircle.style.animationPlayState =
+        running === "running" ? "paused" : "running";
+      leftcircle.style.animationPlayState =
+        running === "running" ? "paused" : "running";
+
+      document.myform.phone.disabled = true;
+      for (i = 1; i <= t; i++) {
+        window.setTimeout("update_p(" + i + "," + t + ")", i * 1000);
+      }
+
+      var infoma = "Scan compelete!"
+      setTimeout(alertinfo, 6000, infoma)
+    }
+
+    function update_p(num, t) {
+      if (num == t) {
+        document.myform.phone.value = "Scan";
+        document.myform.phone.disabled = false;
+      } else {
+        printnr = t - num;
+        document.myform.phone.value = " " + printnr + "s rem";
+      }
+    }
+  </script>
+
+  <script>
+    if (/Chrome\/(\d+\.\d+.\d+.\d+)/.test(navigator.userAgent)) {
+      // Let's log a warning if the sample is not supposed to execute on this
+      // version of Chrome.
+      if (87 > parseInt(RegExp.$1)) {
+        ChromeSamples.setStatus('Warning! Keep in mind this sample has been tested with Chrome ' + 87 + '.');
+      }
+    }
+  </script>
+
+  <script>
+    document.getElementById("displayLog").addEventListener("click", dispOutput);
+
+    function dispOutput() {
+      document.getElementById("output").style.display = "block";
+    }
+  </script>
+
+
+
+
+  <script>
+    log = ChromeSamples.log;
+
+    function isWebBluetoothEnabled() {
+      if (navigator.bluetooth) {
+        return true;
+      } else {
+        ChromeSamples.setStatus('Web Bluetooth API is not available.\n' +
+          'Please make sure the "Experimental Web Platform features" flag is enabled.');
+        return false;
+      }
+    }
+  </script>
+
+</html>
