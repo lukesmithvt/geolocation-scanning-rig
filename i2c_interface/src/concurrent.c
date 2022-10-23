@@ -24,6 +24,8 @@ main (int argc, char **argv)
 void
 main_loop (Application *app, LocationInfo *info)
 {
+  // /* Error checking variable*/
+  // int Status = 0;
 
   /* Start stopwatch */
   app->starttime = millis ();
@@ -71,7 +73,6 @@ main_loop (Application *app, LocationInfo *info)
     }
 
   /* Send scan signal */
-  usleep (I2C_SLEEP_TIME);
   fprintf (app->debug_stream, "[%d] Sending scan signal\n",
            millis () - app->starttime);
   fflush (app->debug_stream);
@@ -82,8 +83,7 @@ main_loop (Application *app, LocationInfo *info)
     }
 
   /* Request signal counts */
-  int wifi_count[NUM_SCAN_MODULES];
-  int ble_count[NUM_SCAN_MODULES];
+  unsigned char signal_counts[NUM_SCAN_MODULES][2];
 
   fprintf (app->debug_stream, "[%d] Requesting signal counts\n",
            millis () - app->starttime);
@@ -91,19 +91,15 @@ main_loop (Application *app, LocationInfo *info)
   usleep (SCAN_SLEEP_TIME);
   for (int i = 0; i < NUM_SCAN_MODULES; i++)
     {
-      while ((wifi_count[i] = wiringPiI2CRead (app->fd[i])) < 0)
-        {
-          usleep (I2C_SLEEP_TIME);
-        }
-      while ((ble_count[i] = wiringPiI2CRead (app->fd[i])) < 0)
+      while (read (app->fd[i], signal_counts[i], 2) < 0)
         {
           usleep (I2C_SLEEP_TIME);
         }
       fprintf (app->debug_stream,
                "[%d] Module at address %d found %d wifi networks and %d ble "
                "devices\n",
-               millis () - app->starttime, DEVICE_ID_0 + i, wifi_count[i],
-               ble_count[i]);
+               millis () - app->starttime, DEVICE_ID_0 + i, signal_counts[i][WIFI_COUNT_INDEX],
+               signal_counts[i][BLE_COUNT_INDEX]);
       fflush (app->debug_stream);
     }
 
@@ -114,7 +110,7 @@ main_loop (Application *app, LocationInfo *info)
   for (int i = 0; i < NUM_SCAN_MODULES; i++)
     {
       int read_len
-          = (wifi_count[i] * WIFI_STR_LEN) + (ble_count[i] * BLE_STR_LEN);
+          = (signal_counts[i][WIFI_COUNT_INDEX] * WIFI_STR_LEN) + (signal_counts[i][BLE_COUNT_INDEX] * BLE_STR_LEN);
 
       while (read (app->fd[i], app->scan_data_buf[i], read_len) < 0)
         {
@@ -133,7 +129,7 @@ main_loop (Application *app, LocationInfo *info)
       char *p = &app->scan_data_buf[i][0];
 
       WifiList w_list
-          = { .entries = { WifiEntry_construct () }, .count = wifi_count[i] };
+          = { .entries = { WifiEntry_construct () }, .count = signal_counts[i][WIFI_COUNT_INDEX] };
 
       for (int j = 0; j < w_list.count; j++)
         {
@@ -155,7 +151,7 @@ main_loop (Application *app, LocationInfo *info)
         }
 
       BLEList b_list
-          = { .entries = { BLEEntry_construct () }, .count = ble_count[i] };
+          = { .entries = { BLEEntry_construct () }, .count = signal_counts[i][BLE_COUNT_INDEX] };
 
       for (int j = 0; j < b_list.count; j++)
         {

@@ -13,33 +13,10 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
-
-SRCS := $(shell find src -name '*.c')
-DEPS := $(shell find include -name '*.h')
-OBJS := $(patsubst src/%,build/%,$(SRCS:.c=.o))
-
 CFLAGS := -O3 -std=gnu99 -Wall -g
 LFLAGS := -lwiringPi
 
 
-concurrent: bin/concurrent exp0rt
-
-bin/concurrent: $(OBJS)
-> @mkdir -p bin
+menu_mode: menu_mode.c
+> $(CC) $(CFLAGS) -c $< -o $@
 > $(CC) -o $@ $^ $(LFLAGS) 
-
-$(OBJS): build/%.o: src/%.c $(DEPS)
-> @mkdir -p build
-> $(CC) $(CFLAGS) -c $< -Iinclude -o $@
-
-
-.PHONY: clean reset exp0rt
-
-clean:
-> $(RM) -r bin build
-
-reset:
-> $(RM) -r log raw
-
-exp0rt:
-> @cp ./bin/concurrent ../BLE_Server
