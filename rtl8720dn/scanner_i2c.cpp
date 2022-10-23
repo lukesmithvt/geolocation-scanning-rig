@@ -27,8 +27,7 @@
   (WIFI_COUNT_MAX * WIFI_STR_LEN) + (BLE_COUNT_MAX * BLE_STR_LEN)
 
 #define SCAN_REQUEST 0x11
-#define READ_WIFI_COUNT 0x12
-#define READ_BLE_COUNT 0x13
+#define READ_SIGNAL_COUNTS 0x12
 #define READ_SIGNAL_DATA 0x14
 #define TEST_BYTE 0x05
 
@@ -38,6 +37,7 @@ unsigned char WriteBuffer[BUFFER_SIZE];
 
 static uint8_t wifi_count;
 static uint8_t ble_count;
+unsigned char signal_counts[2];
 int state;
 
 static rtw_result_t
@@ -117,15 +117,11 @@ requestEvent ()
 
   switch (state)
     {
-    case READ_WIFI_COUNT:
+      case READ_SIGNAL_COUNTS:
       {
-        Wire.write (wifi_count);
-        state = READ_BLE_COUNT;
-        break;
-      }
-    case READ_BLE_COUNT:
-      {
-        Wire.write (ble_count);
+        signal_counts[0] = wifi_count;
+        signal_counts[1] = ble_count;
+        Wire.slaveWrite (signal_counts, 2);
         state = READ_SIGNAL_DATA;
         break;
       }
@@ -173,7 +169,7 @@ receiveEvent (int num_bytes)
         BLE.configScan ()->startScan (BLE_SCAN_INTERVAL);
         int delta = millis () - starttime;
 
-        state = READ_WIFI_COUNT;
+        state = READ_SIGNAL_COUNTS;
 
         sprintf (print_buf, "Found %d wifi networks and %d ble devices.", n,
                  ble_count);
