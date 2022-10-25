@@ -17,14 +17,16 @@
 #define DEVICE_ID_1 0x09
 #define DEVICE_ID_2 0x0A
 #define DEVICE_ID_3 0x0B
-#define NUM_SCAN_MODULES 2
+#define NUM_SCAN_MODULES 1
 #define I2C_BUS_0 "/dev/i2c-0" // Physical/Board pin 27 (SDA) & 28 (SCL)
 
-/* Buffer capacities */
+/* Buffer capacities and indices */
 #define WIFI_STR_LEN 40
 #define BLE_STR_LEN 7
 #define WIFI_COUNT_MAX 64
 #define BLE_COUNT_MAX 256
+#define WIFI_COUNT_INDEX 0
+#define BLE_COUNT_INDEX 1
 #define SCAN_DATA_BUFFER_SIZE                                                 \
   (WIFI_COUNT_MAX * WIFI_STR_LEN) + (BLE_COUNT_MAX * BLE_STR_LEN)
 #define SSID_MAX_LEN 32
@@ -35,8 +37,7 @@
 
 /* Microcontroller states */
 #define SCAN_REQUEST 0x11
-#define READ_WIFI_COUNT 0x12
-#define READ_BLE_COUNT 0x13
+#define READ_COUNTS 0x12
 #define READ_SIGNAL_DATA 0x14
 #define TEST_BYTE 0x05
 

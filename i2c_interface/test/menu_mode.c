@@ -4,7 +4,6 @@
 #include <wiringPi.h> // millis
 #include <wiringPiI2C.h>
 
-#define DEVICE_ID 0x09
 #define WIFI_STR_LEN 40
 #define BLE_STR_LEN 7
 #define WIFI_COUNT_MAX 50
@@ -13,22 +12,23 @@
   (WIFI_COUNT_MAX * WIFI_STR_LEN) + (BLE_COUNT_MAX * BLE_STR_LEN)
 
 #define SCAN_REQUEST 0x11
-#define READ_WIFI_COUNT 0x12
-#define READ_BLE_COUNT 0x13
+// #define READ_WIFI_COUNT 0x12
+// #define READ_BLE_COUNT 0x13
+#define READ_COUNTS 0x12
 #define READ_SIGNAL_DATA 0x14
 #define TEST_BYTE 0x05
 
 char buf[BUFFER_SIZE];
 int wifi_count;
 int ble_count;
+char counts[2];
 
 int
 main (int argc, char **argv)
 {
   if (argc < 2)
     {
-      printf ("Usage: %s <i2c_address>\n",
-              argv[0]);
+      printf ("Usage: %s <i2c_address>\n", argv[0]);
       exit (1);
     }
 
@@ -42,6 +42,9 @@ main (int argc, char **argv)
     }
   printf ("I2C communication successfully setup.\n");
 
+  /* Setup for GPIO */
+  wiringPiSetup () ;
+
   char cmd;
   int Status = 0;
   int loop = 1;
@@ -51,6 +54,7 @@ main (int argc, char **argv)
       printf ("\ta - Send scan request\n");
       printf ("\tb - Read signal count\n");
       printf ("\tc - Request to read signal data\n");
+      printf ("\tr - Reset module\n");
       printf ("\tz - Send test byte\n");
       printf ("\tq - quit\n");
       scanf (" %c", &cmd);
@@ -68,10 +72,9 @@ main (int argc, char **argv)
 
         case 'b':
           // Status = read (fd, buf, 1); // read number of networks found
-          wifi_count = wiringPiI2CRead (fd);
-          printf ("Found %d wifi networks.\n", wifi_count);
-          ble_count = wiringPiI2CRead (fd);
-          printf ("Found %d ble devices.\n", ble_count);
+          read (fd, counts, 2);
+          printf ("Found %d wifi networks.\n", counts[0]);
+          printf ("Found %d ble devices.\n", counts[1]);
           break;
 
         case 'c':
@@ -93,6 +96,17 @@ main (int argc, char **argv)
                 printf ("%02X ", buf[i]);
               }
             printf ("\nTime to receive data over I2C is: %d ms\n", delta);
+            break;
+          }
+
+        case 'r':
+          {
+            int pin = address + 13;
+            pinMode (pin, OUTPUT);
+            digitalWrite (pin, HIGH);
+            delay (500);
+            digitalWrite (pin, LOW);
+            delay (500);
             break;
           }
 
