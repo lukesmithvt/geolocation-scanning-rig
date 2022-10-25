@@ -5,7 +5,7 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-#include <wiringPi.h> /* millis */
+#include <wiringPi.h>
 #include <wiringPiI2C.h>
 
 /***** Definitions *****/
@@ -17,7 +17,7 @@
 #define DEVICE_ID_1 0x09
 #define DEVICE_ID_2 0x0A
 #define DEVICE_ID_3 0x0B
-#define NUM_SCAN_MODULES 1
+#define NUM_SCAN_MODULES 2
 #define I2C_BUS_0 "/dev/i2c-0" // Physical/Board pin 27 (SDA) & 28 (SCL)
 
 /* Buffer capacities and indices */
@@ -36,10 +36,10 @@
 #define PAYLOAD_FILENAME_SIZE 28
 
 /* Microcontroller states */
-#define SCAN_REQUEST 0x11
-#define READ_COUNTS 0x12
+#define TEST_BYTE 0x11
+#define SCAN_REQUEST 0x12
+#define READ_SIGNAL_COUNTS 0x13
 #define READ_SIGNAL_DATA 0x14
-#define TEST_BYTE 0x05
 
 /* Define output stream parameters */
 #define ENABLE_LOG_TO_FILE 0
