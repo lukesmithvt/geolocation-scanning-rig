@@ -11,7 +11,7 @@
 #include <wl_definitions.h>
 #include <wl_types.h>
 
-#define DEVICE_ID 0x09 //0x09 0x0A 0x0B
+#define DEVICE_ID 0x08 // 0x09 0x0A 0x0B
 
 #define WIFI_SCAN_INTERVAL 500
 #define BLE_SCAN_INTERVAL 1000
@@ -27,8 +27,7 @@
   (WIFI_COUNT_MAX * WIFI_STR_LEN) + (BLE_COUNT_MAX * BLE_STR_LEN)
 
 #define SCAN_REQUEST 0x11
-#define READ_WIFI_COUNT 0x12
-#define READ_BLE_COUNT 0x13
+#define READ_SIGNAL_COUNTS 0x12
 #define READ_SIGNAL_DATA 0x14
 #define TEST_BYTE 0x05
 
@@ -38,6 +37,7 @@ unsigned char WriteBuffer[BUFFER_SIZE];
 
 static uint8_t wifi_count;
 static uint8_t ble_count;
+unsigned char signal_counts[2];
 int state;
 
 static rtw_result_t
@@ -63,9 +63,7 @@ wifidrv_scan_result_handler (rtw_scan_handler_result_t *malloced_scan_result)
             {
               *p++ = record->BSSID.octet[i];
             }
-          *p++ = (char)(record->signal_strength
-                        & 0xFF); // possible that this value is
-                                 // already an average
+          *p++ = (char)(record->signal_strength & 0xFF);
           wifi_count++;
         }
     }
@@ -97,7 +95,6 @@ scanNetworks ()
 {
   uint8_t attempts = 10;
 
-  wifi_count = 0;
   if (wifi_scan_networks (wifidrv_scan_result_handler, NULL) != RTW_SUCCESS)
     {
       return WL_FAILURE;
@@ -117,15 +114,11 @@ requestEvent ()
 
   switch (state)
     {
-    case READ_WIFI_COUNT:
+    case READ_SIGNAL_COUNTS:
       {
-        Wire.write (wifi_count);
-        state = READ_BLE_COUNT;
-        break;
-      }
-    case READ_BLE_COUNT:
-      {
-        Wire.write (ble_count);
+        signal_counts[0] = wifi_count;
+        signal_counts[1] = ble_count;
+        Wire.slaveWrite (signal_counts, 2);
         state = READ_SIGNAL_DATA;
         break;
       }
@@ -167,16 +160,18 @@ receiveEvent (int num_bytes)
     {
     case SCAN_REQUEST:
       {
+        wifi_count = 0;
+        ble_count = 0;
         Serial.println ("Conducting scan...");
         int starttime = millis ();
-        int n = scanNetworks ();
+        scanNetworks ();
         BLE.configScan ()->startScan (BLE_SCAN_INTERVAL);
         int delta = millis () - starttime;
 
-        state = READ_WIFI_COUNT;
+        state = READ_SIGNAL_COUNTS;
 
-        sprintf (print_buf, "Found %d wifi networks and %d ble devices.", n,
-                 ble_count);
+        sprintf (print_buf, "Found %d wifi networks and %d ble devices.",
+                 wifi_count, ble_count);
         Serial.println (print_buf);
         sprintf (print_buf, "Finished in %d ms.", delta);
         Serial.println (print_buf);
@@ -204,19 +199,15 @@ setup ()
   Wire.onReceive (receiveEvent);
 
   BLE.init ();
-  BLE.configScan ()->setScanMode (
-      GAP_SCAN_MODE_ACTIVE); // Active mode requests for scan response packets
-  // BLE.configScan ()->setScanInterval (500); // Start a scan every 500ms
-  // BLE.configScan ()->setScanWindow (250);   // Each scan lasts for 250ms
-  BLE.configScan ()->updateScanParams ();
-  // Provide a callback function to process scan data.
-  // If no function is provided, default BLEScan::printScanInfo is used
+  BLE.configScan ()->setScanMode (GAP_SCAN_MODE_ACTIVE);
   BLE.setScanCallback (scanFunction);
   BLE.beginCentral (0);
+
+  wifi_count = 0;
+  ble_count = 0;
 }
 
 void
 loop ()
 {
-  // delay (SCAN_INTERVAL);
 }
