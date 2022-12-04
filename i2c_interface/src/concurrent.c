@@ -1,5 +1,37 @@
+/*****************************************************************************/
+/**
+ * @file   concurrent.cpp
+ * @brief  Source file for the Raspberry Pi implementation of the Geolocation
+ * Scanning Rig using the Raspberry Pi Operating System.
+ * @details
+ *
+ * This source code provides the interface with the RTL8720DN BW16 Wi-Fi/BLE
+ * modules acting as the master of an I2C bus.
+ *
+ * It's required to consult the Geolocation Scanning Rig Software
+ * Implementation Guide on how to install the operating system.
+ *
+ * @author Luke Smith (lukesmith@vt.edu)
+ */
+/*****************************************************************************/
+
+/***************************** Include Files *********************************/
+
 #include "scanrig.h"
 
+/******************************************************************************/
+/**
+ *
+ * The main function. Declares the structs and parses command line arguments.
+ *
+ * @param	argc is the number of arguments taken in from the command line.
+ *
+ * @param argv is the array of C-strings that hold the arguments taken in from
+ * the command line.
+ *
+ * @return 0 if normal execution, 1 if error
+ *
+ ******************************************************************************/
 int
 main (int argc, char **argv)
 {
@@ -21,6 +53,19 @@ main (int argc, char **argv)
   return 0;
 }
 
+/******************************************************************************/
+/**
+ *
+ * The main loop function.
+ *
+ * @param	app is a pointer to the struct containing miscellaneous
+ * application variables.
+ *
+ * @param info contains the arguments from the commandline.
+ *
+ * @return None.
+ *
+ ******************************************************************************/
 void
 main_loop (Application *app, LocationInfo *info)
 {
@@ -43,7 +88,7 @@ main_loop (Application *app, LocationInfo *info)
   if ((app->debug_stream = fopen (app->debug_filename, "w")) == NULL)
     {
       fprintf (stdout, "Failed to open log file for writing.\n");
-      exit (1);
+      // exit (1);
     }
 #else
   app->debug_stream = stdout;
@@ -69,7 +114,7 @@ main_loop (Application *app, LocationInfo *info)
   for (int i = 0; i < NUM_SCAN_MODULES; i++)
     {
       wiringPiI2CWrite (app->fd[i], TEST_BYTE);
-      usleep(I2C_SLEEP_TIME);
+      usleep (I2C_SLEEP_TIME);
     }
 
   /* Send scan signal */
@@ -79,7 +124,7 @@ main_loop (Application *app, LocationInfo *info)
   for (int i = 0; i < NUM_SCAN_MODULES; i++)
     {
       wiringPiI2CWrite (app->fd[i], SCAN_REQUEST);
-      usleep(I2C_SLEEP_TIME);
+      usleep (I2C_SLEEP_TIME);
     }
 
   /* Request signal counts */
@@ -98,7 +143,8 @@ main_loop (Application *app, LocationInfo *info)
       fprintf (app->debug_stream,
                "[%d] Module at address %d found %d wifi networks and %d ble "
                "devices\n",
-               millis () - app->starttime, DEVICE_ID_0 + i, signal_counts[i][WIFI_COUNT_INDEX],
+               millis () - app->starttime, DEVICE_ID_0 + i,
+               signal_counts[i][WIFI_COUNT_INDEX],
                signal_counts[i][BLE_COUNT_INDEX]);
       fflush (app->debug_stream);
     }
@@ -109,8 +155,8 @@ main_loop (Application *app, LocationInfo *info)
   fflush (app->debug_stream);
   for (int i = 0; i < NUM_SCAN_MODULES; i++)
     {
-      int read_len
-          = (signal_counts[i][WIFI_COUNT_INDEX] * WIFI_STR_LEN) + (signal_counts[i][BLE_COUNT_INDEX] * BLE_STR_LEN);
+      int read_len = (signal_counts[i][WIFI_COUNT_INDEX] * WIFI_STR_LEN)
+                     + (signal_counts[i][BLE_COUNT_INDEX] * BLE_STR_LEN);
 
       while (read (app->fd[i], app->scan_data_buf[i], read_len) < 0)
         {
@@ -128,8 +174,8 @@ main_loop (Application *app, LocationInfo *info)
     {
       char *p = &app->scan_data_buf[i][0];
 
-      WifiList w_list
-          = { .entries = { WifiEntry_construct () }, .count = signal_counts[i][WIFI_COUNT_INDEX] };
+      WifiList w_list = { .entries = { WifiEntry_construct () },
+                          .count = signal_counts[i][WIFI_COUNT_INDEX] };
 
       for (int j = 0; j < w_list.count; j++)
         {
@@ -150,8 +196,8 @@ main_loop (Application *app, LocationInfo *info)
           w_list.entries[j] = w;
         }
 
-      BLEList b_list
-          = { .entries = { BLEEntry_construct () }, .count = signal_counts[i][BLE_COUNT_INDEX] };
+      BLEList b_list = { .entries = { BLEEntry_construct () },
+                         .count = signal_counts[i][BLE_COUNT_INDEX] };
 
       for (int j = 0; j < b_list.count; j++)
         {
@@ -172,7 +218,7 @@ main_loop (Application *app, LocationInfo *info)
                millis () - app->starttime, DEVICE_ID_0 + i);
       fflush (app->debug_stream);
       snprintf (app->payload_filename, PAYLOAD_FILENAME_SIZE,
-                "./raw/%llx.json", timestamp);
+                "./raw/%x%llx.json", DEVICE_ID_0 + i, timestamp);
       FILE *f_out;
       mkdir ("./raw", 0777);
       if ((f_out = fopen (app->payload_filename, "w")) == NULL)
@@ -191,6 +237,23 @@ main_loop (Application *app, LocationInfo *info)
   fflush (app->debug_stream);
 }
 
+/******************************************************************************/
+/**
+ *
+ * The main loop function.
+ *
+ * @param info contains the property name, POI, and group number.
+ *
+ * @param w_list contains all of the Wi-Fi signal data.
+ *
+ * @param b_list contains all of the BLE signal data.
+ *
+ * @param f is a file descriptor used to write the formatted data to a JSON
+ * file.
+ *
+ * @return None.
+ *
+ ******************************************************************************/
 void
 writeToPayloadFile (LocationInfo *info, WifiList w_list, BLEList b_list,
                     FILE *f)

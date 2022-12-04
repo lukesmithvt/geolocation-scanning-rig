@@ -1,14 +1,29 @@
-#include <sys/stat.h>
+/*****************************************************************************/
+/**
+ * @file   scanrig.h
+ * @brief  Header file for the Raspberry Pi implementation of the Geolocation
+ * Scanning Rig using the Raspberry Pi Operating System.
+ *
+ * It's required to consult the Geolocation Scanning Rig Software
+ * Implementation Guide on how to install the operating system.
+ *
+ * @author Luke Smith (lukesmith@vt.edu)
+ */
+/*****************************************************************************/
+
+/***************************** Include Files *********************************/
+
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <time.h>
 #include <unistd.h>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
 
-/***** Definitions *****/
+/****************************** Definitions **********************************/
 
 /* System */
 #define I2C_SLEEP_TIME 200 * 1000
@@ -17,14 +32,14 @@
 #define DEVICE_ID_1 0x09
 #define DEVICE_ID_2 0x0A
 #define DEVICE_ID_3 0x0B
-#define NUM_SCAN_MODULES 2
+#define NUM_SCAN_MODULES 3
 #define I2C_BUS_0 "/dev/i2c-0" // Physical/Board pin 27 (SDA) & 28 (SCL)
 
 /* Buffer capacities and indices */
 #define WIFI_STR_LEN 40
 #define BLE_STR_LEN 7
-#define WIFI_COUNT_MAX 64
-#define BLE_COUNT_MAX 256
+#define WIFI_COUNT_MAX 255
+#define BLE_COUNT_MAX 255
 #define WIFI_COUNT_INDEX 0
 #define BLE_COUNT_INDEX 1
 #define SCAN_DATA_BUFFER_SIZE                                                 \
@@ -33,7 +48,7 @@
 #define MAC_ADDR_LEN 6
 #define USER_INFO_BUFFER_SIZE 128
 #define DEBUG_FILENAME_SIZE 27
-#define PAYLOAD_FILENAME_SIZE 28
+#define PAYLOAD_FILENAME_SIZE 29
 
 /* Microcontroller states */
 #define TEST_BYTE 0x11
@@ -42,9 +57,9 @@
 #define READ_SIGNAL_DATA 0x14
 
 /* Define output stream parameters */
-#define ENABLE_LOG_TO_FILE 0
+#define ENABLE_LOG_TO_FILE 1
 
-/***** Structures *****/
+/****************************** Structures ***********************************/
 
 typedef struct WifiEntry
 {
@@ -89,7 +104,7 @@ typedef struct Application
   int fd[NUM_SCAN_MODULES];
 } Application;
 
-/***** Constructors *****/
+/******************************* Constructors ********************************/
 
 WifiEntry
 WifiEntry_construct ()
@@ -125,7 +140,7 @@ Application_construct ()
   return app;
 }
 
-/***** Function Prototypes *****/
+/**************************** Function Prototypes ****************************/
 
 void main_loop (Application *app, LocationInfo *info);
 void writeToPayloadFile (LocationInfo *info, WifiList w_list, BLEList b_list,

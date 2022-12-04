@@ -23,6 +23,7 @@ SOFTWARE.
 
 import dbus
 
+import json_parser
 from advertisement import Advertisement
 from service import Application, Service, Characteristic, Descriptor
 from gpiozero import CPUTemperature
@@ -34,7 +35,7 @@ NOTIFY_TIMEOUT = 5000
 class ThermometerAdvertisement(Advertisement):
     def __init__(self, index):
         Advertisement.__init__(self, index, "peripheral")
-        self.add_local_name("Thermometer")
+        self.add_local_name("PWC Scanning Rig")
         self.include_tx_power = True
 
 class ThermometerService(Service):
@@ -68,8 +69,10 @@ class ThermometerService(Service):
         self.scan = scan
         if self.scan:
             print("Scanning now...")
-            subprocess.run(["./concurrent", "1", self.pname, self.poi, self.group])
-
+            subprocess.run(["./concurrent", "4", self.pname, self.poi, self.group])
+            json_parser.merge(self.pname, self.poi, self.group)
+            print("Done!")
+            
 class TempCharacteristic(Characteristic):
     TEMP_CHARACTERISTIC_UUID = "00000002-710e-4a5b-8d75-3e5b444bc3cf"
 

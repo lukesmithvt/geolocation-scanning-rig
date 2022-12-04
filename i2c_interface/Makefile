@@ -42,4 +42,4 @@ reset:
 > $(RM) -r log raw
 
 exp0rt:
-> @cp ./bin/concurrent ../BLE_Server
+> @cp ./bin/concurrent ../../cputemp
