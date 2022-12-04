@@ -1,3 +1,3 @@
-# Geolocation Scanning Rig
+# rtl-wifi-ble-scanner
 
-This repository contains custom software for the Raspberry Pi, Wi-Fi/BLE modules, and Android phone components of the Geolocation Scanning Rig.
+![rtl8720dn finite-state machine](media/rtl8720dn_fsm.drawio.png)
